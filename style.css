@@ -1,13 +1,43 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
 *, *::before, *::after{
     box-sizing: border-box;
 }
 
-ul, ol, li{
-    list-style-type: none;
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Light', sans-serif;
 }
+
+.container{
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    animation: unskew 3s forwards;
+}
+
+@keyframes unskew{
+    0% {
+        transform: skewY(10deg);
+    }
+
+    100%{
+        transform: skewY(0deg);
+    }
+}
+
+.sculpture{
+    top: 33.5%;
+    left: 40%;
+    position: absolute;
+    clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+}
+
+.main-header{
+    top: 22%;
+    left: 20%;
+    color: black;
+    font-size: 4rem;
+    position: absolute;
+    z-index: 1;
+}
+
