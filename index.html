@@ -19,22 +19,49 @@
         </h2>
     </div>
 
-    <div class="hc-right">
-        <div class="form-block">
+    <form id="tg-form">
+        <input type="text" name="name" placeholder="Как вас зовут?" required>
+        <input type="tel" name="phone" placeholder="Ваш номер" required>
+        <input type="email" name="email" placeholder="Ваш E-mail">
+        <button type="submit">Отправить</button>
+    </form>
 
-            <div class="form-title">Акция для нoвых клиeнтoв</div>
-            <div class="form-text">Пoлучитe скидку 15% и бeсплатную диагнoстику Вашeгo кoмпьютepа</div>
+    <script>
+        const token = "8451409637:AAFpMA4XRlsRy4jVuNbitYH5-nWHDglUxwc"; // из BotFather
+        const chatId = "-1003120709891";     // ID чата или канала
 
-            <form action="telegram.php" method="post">
-                <input type="text" name="name" placeholder="Как вас зoвут?">
-                <input type="tel" name="phone" placeholder="Oставьтe свoй нoмep" required="">
-                <input type="text" name="email" placeholder="Ваш E-mail">
-                <button type="submit" class="send-button">Пoлучить скидку</button>
-            </form>
+        document.getElementById("tg-form").addEventListener("submit", function(e) {
+            e.preventDefault();
 
-        </div>
-    </div>
-    </div>
-    </div>
+            const name = this.name.value;
+            const phone = this.phone.value;
+            const email = this.email.value;
+
+            const text = `📝 Новая заявка:
+👤 Имя: ${name}
+📞 Телефон: ${phone}
+📧 Email: ${email}`;
+
+            fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: text,
+                    parse_mode: "HTML"
+                })
+            })
+                .then(r => r.json())
+                .then(result => {
+                    if (result.ok) {
+                        alert("✅ Заявка отправлена!");
+                        this.reset();
+                    } else {
+                        alert("❌ Ошибка при отправке");
+                        console.error(result);
+                    }
+                });
+        });
+    </script>
 </body>
 </html>
