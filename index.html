@@ -18,27 +18,23 @@
             За 4 месяца помогу выйти на новый уровень владения итальянским языком.
         </h2>
     </div>
-    <form method="post" class="form" action="telegram.php">
-        <h2>Заказать обратный звонок</h2>
-        <input
-                type="text"
-                id="name"
-                name="name"
-                class="input"
-                placeholder="Ваше имя"
-                required
-        />
 
-        <input
-                type="tel"
-                id="phone"
-                name="phone"
-                class="input"
-                placeholder="Номер телефона"
-                required
-        />
+    <div class="hc-right">
+        <div class="form-block">
 
-        <input type="submit" value="Отправить" class="btn" />
-    </form>
+            <div class="form-title">Акция для нoвых клиeнтoв</div>
+            <div class="form-text">Пoлучитe скидку 15% и бeсплатную диагнoстику Вашeгo кoмпьютepа</div>
+
+            <form action="telegram.php" method="post">
+                <input type="text" name="name" placeholder="Как вас зoвут?">
+                <input type="tel" name="phone" placeholder="Oставьтe свoй нoмep" required="">
+                <input type="text" name="email" placeholder="Ваш E-mail">
+                <button type="submit" class="send-button">Пoлучить скидку</button>
+            </form>
+
+        </div>
+    </div>
+    </div>
+    </div>
 </body>
 </html>
