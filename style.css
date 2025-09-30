@@ -40,19 +40,6 @@ body{
     animation-delay: calc(var(--delay)*4);
 }
 
-.slide-up:nth-child(5){
-    animation-delay: calc(var(--delay)*5);
-}
-
-.slide-up:nth-child(6){
-    animation-delay: calc(var(--delay)*6);
-}
-
-.slide-up:nth-child(7){
-    animation-delay: calc(var(--delay)*7);
-}
-
-
 @keyframes sliding-up {
     to {
         opacity: 1;
@@ -109,4 +96,43 @@ body{
     color: white;
     transition: 0.6s;
     cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 600px;
+}
+
+input{
+    width: 140px;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 2rem;
+    margin-bottom: 10px;
+    margin-left: auto;
+    transform: translateY(-8px);
+}
+
+input:focus{
+    outline: none;
+}
+
+.submit-button{
+    margin-top: 10px;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    border: 2px solid black;
+
+}
+
+.submit-button:hover{
+    background: black;
+    color: white;
+}
+
+.input-item{
+    display: flex;
+    width: 240px;
 }
