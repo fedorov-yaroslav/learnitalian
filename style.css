@@ -5,8 +5,7 @@
 body{
     font-family: 'Noto Sans TC', sans-serif;
     padding: 0;
-    margin: 0;
-}
+    margin: 0;}
 
 :root{
     --delay: 1.4s;
@@ -93,13 +92,16 @@ body{
 .gradient-text{
     margin-bottom: 0;
     margin-top: 0.4rem;
-    background: linear-gradient(to right, rgb(110, 102, 25), #000000, rgb(97, 17, 17));
+    /*    background: linear-gradient(to right, rgb(110, 102, 25), #000000, rgb(97, 17, 17));*/
+    background: linear-gradient(to right, #051332, #27064e, rgb(8, 33, 158));
     background-clip: text;
     color: transparent;
 }
 
 .h1{
-    font-size: 5rem;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    max-width: 1000px;
 }
 
 .h2{
@@ -149,7 +151,7 @@ form{
 }
 
 input{
-    width: 160px;
+    width: 170px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border: 1px solid black;
@@ -195,7 +197,7 @@ input:focus{
     transition: 0.6s;
     cursor: pointer;
     transform: translateY(-4px);
-    background: rgba(191, 255, 0, 0.1);
+    background: rgba(115, 255, 0, 0.23);
 }
 
 .submit-button:hover{
