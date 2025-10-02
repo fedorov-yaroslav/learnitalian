@@ -1,42 +1,42 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="mega-container">
-        <h1 class="gradient-text slide-up h1">
-            Хочешь заговорить на итальянском языке?
-        </h1>
-        <h2 class="slide-up h2">
-            За 4 месяца помогу выйти на новый уровень владения итальянским языком.
-        </h2>
+<div class="mega-container">
+  <h1 class="gradient-text slide-up h1">
+    Хочешь заговорить на итальянском языке?
+  </h1>
+  <h2 class="slide-up h2">
+    За 4 месяца помогу выйти на новый уровень владения итальянским языком.
+  </h2>
 
-        <form id="tg-form" method = "POST" class="slide-up">
-            <div class="input-item">
-                <input type="text" id="user-name" placeholder="Имя" name="name" required>
-            </div>
-            <div class="input-item">
-                <input type="email" id="user-mail" placeholder="Почта" name="email" required>
-            </div>
-            <div class="input-item">
-                <input type="tel" id="user-tel" name="phone" value="+7" required>
-            </div>
-            <div class="input-item">
-                <input type="tel" id="user-tg" placeholder="Telegram ID" name="telegram" required>
-            </div>
-            <div class="input-item">
-                <input type="submit" class="submit-button" value="Бесплатное занятие">
-            </div>
-        </form>
+  <form id="tg-form" method = "POST" class="slide-up">
+    <div class="input-item">
+      <input aria-label="Имя" type="text" id="user-name" placeholder="Имя" name="name" required>
     </div>
+    <div class="input-item">
+      <input aria-label="Email адрес" type="email" id="user-mail" placeholder="Почта" name="email" required>
+    </div>
+    <div class="input-item">
+      <input aria-label="Номер телефона" type="tel" id="user-tel" name="phone" value="+7" required>
+    </div>
+    <div class="input-item">
+      <input aria-label="ID в Телеграме"  type="tel" id="user-tg" placeholder="Telegram ID" name="telegram" required>
+    </div>
+    <div class="input-item">
+      <input type="submit" class="submit-button" value="Бесплатное занятие">
+    </div>
+  </form>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
