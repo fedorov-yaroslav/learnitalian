@@ -17,51 +17,26 @@
         <h2 class="slide-up h2">
             За 4 месяца помогу выйти на новый уровень владения итальянским языком.
         </h2>
+
+        <form id="tg-form" method = "POST" class="slide-up">
+            <div class="input-item">
+                <input type="text" id="user-name" placeholder="Имя" name="name" required>
+            </div>
+            <div class="input-item">
+                <input type="email" id="user-mail" placeholder="Почта" name="email" required>
+            </div>
+            <div class="input-item">
+                <input type="tel" id="user-tel" name="phone" value="+7" required>
+            </div>
+            <div class="input-item">
+                <input type="tel" id="user-tg" placeholder="Telegram ID" name="telegram" required>
+            </div>
+            <div class="input-item">
+                <input type="submit" class="submit-button" value="Бесплатное занятие">
+            </div>
+        </form>
     </div>
 
-    <form id="tg-form">
-        <input type="text" name="name" placeholder="Как вас зовут?" required>
-        <input type="tel" name="phone" placeholder="Ваш номер" required>
-        <input type="email" name="email" placeholder="Ваш E-mail">
-        <button type="submit">Отправить</button>
-    </form>
-
-    <script>
-        const token = "8451409637:AAFpMA4XRlsRy4jVuNbitYH5-nWHDglUxwc"; // из BotFather
-        const chatId = "-1003120709891";     // ID чата или канала
-
-        document.getElementById("tg-form").addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            const name = this.name.value;
-            const phone = this.phone.value;
-            const email = this.email.value;
-
-            const text = `📝 Новая заявка:
-👤 Имя: ${name}
-📞 Телефон: ${phone}
-📧 Email: ${email}`;
-
-            fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: text,
-                    parse_mode: "HTML"
-                })
-            })
-                .then(r => r.json())
-                .then(result => {
-                    if (result.ok) {
-                        alert("✅ Заявка отправлена!");
-                        this.reset();
-                    } else {
-                        alert("❌ Ошибка при отправке");
-                        console.error(result);
-                    }
-                });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
