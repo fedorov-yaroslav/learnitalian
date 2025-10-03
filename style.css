@@ -19,7 +19,7 @@ body{
     background: linear-gradient(to right, rgba(0, 91, 255, 1), rgba(10, 184, 184, 1));
     width: 99.5vw;
     margin-left: 2px;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,7 +261,7 @@ input[type="checkbox"]:checked::before{
 details{
     margin-bottom: 0.1rem;
     font-size: 1.3rem;
-    max-height: 40px;
+    max-height: 80px;
     transition: max-height 1s ease-in-out;
     overflow: hidden;
 }
@@ -279,6 +279,30 @@ details:hover summary{
     text-decoration: underline 1px;
 }
 
+summary{
+    position: relative;
+    margin-left: 1rem;
+}
+
+summary::before{
+    content: '';
+    background: rgba(88, 160, 255, 0.65);
+    width: 14px;
+    height: 14px;
+    clip-path: polygon(100% 0%, 100% 100%, 20% 100%);
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    bottom: 6px;
+    transition: 0.2s;
+}
+
+details[open] summary::before{
+    clip-path: polygon(0% 0%, 100% 0%, 20% 100%);
+    background: rgba(29, 255, 0, 0.58);
+    transition: 0.3s;
+}
+
 .details-content{
     margin-left: 30px;
     border-left: 1px solid black;
@@ -291,10 +315,6 @@ details:hover summary{
     margin-left: 0;
 }
 /*О преподавателе*/
-
-.about h2{
-    ;
-}
 
 .about__text{
     margin-top: 0.5rem;
@@ -317,6 +337,25 @@ details:hover summary{
     transition: 0.5s
 }
 
+.about li{
+    list-style-type: none;
+    position: relative;
+}
+
 .underline{
     text-decoration: underline;
+}
+
+nav{
+    position: sticky;
+    top: 50px;
+    width: 80vw;
+    height: 50px;
+    background: #ebf8ff;
+    border-radius: 20px;
+    margin-left: clamp(10px, 15%, 100px);
+    display: flex;
+    padding-left: clamp(10px, 15%, 30%);
+    font-size: 1.2rem;
+    align-items: center;
 }
