@@ -7,6 +7,7 @@ body{
     /*добавил отступ по высоте баннера*/
     margin: 0;
     padding: 0;
+    background: #F4F5F6;
 }
 
 :root{
@@ -228,6 +229,11 @@ input[type="checkbox"]:checked::before{
     color: inherit;
 }
 
+.data-handling a:hover{
+    color: rgb(154, 154, 154);;
+}
+
+
 .submit-button{
     margin-top: 6px;
     width: fit-content;
@@ -349,13 +355,37 @@ details[open] summary::before{
 nav{
     position: sticky;
     top: 50px;
-    width: 80vw;
+    width: 60vw;
     height: 50px;
-    background: #ebf8ff;
+    background: #ffffff;
     border-radius: 20px;
-    margin-left: clamp(10px, 15%, 100px);
+    margin-left: clamp(10px, 20%, 30%);
     display: flex;
     padding-left: clamp(10px, 15%, 30%);
-    font-size: 1.2rem;
     align-items: center;
+    justify-content: start;
+    font-family: 'Roboto Condensed', sans-serif;
+    opacity: 0.995;
+}
+
+nav ul{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.nav__item{
+    width: fit-content;
+    list-style-type: none;
+    font-size: 1.3rem;
+}
+
+.nav__item:hover{
+    color: #6c6c6c;
+}
+
+.nav__item a{
+    color: inherit;
+    text-decoration: none;
 }
