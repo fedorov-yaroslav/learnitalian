@@ -24,7 +24,7 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    animation: fadeIn calc(var(--delay)*5) forwards;
+    animation: fadeIn calc(var(--delay)*0) forwards;
     z-index: 1;
 }
 
@@ -282,10 +282,6 @@ details[open]{
 details summary{
     list-style-type: none;
     cursor: pointer;
-}
-
-details:hover summary{
-    text-decoration: underline 1px;
 }
 
 summary{
