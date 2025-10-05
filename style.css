@@ -7,15 +7,29 @@ body{
     /*добавил отступ по высоте баннера*/
     margin: 0;
     padding: 0;
-    background: #F4F5F6;
+    background: var(--background-color);
 }
+
 
 :root{
     --delay: 1s;
+
+    --background-color: #FFFFFF;
+
+    --font-color: #071013;
+    --font-color-secondary: #B6C8CE;
+
+    --accent-color: #E4FF1A;
+    --accent-color-opacity: 0.13;
+    --accent-color-transparent: color-mix(in srgb, var(--accent-color) calc(var(--accent-color-opacity) * 100%), transparent);
+
+    --secondary-color: #0094C6;
+    --secondary-color-opacity: 0.05;
+    --secondary-color-transparent: color-mix(in srgb, var(--secondary-color) calc(var(--secondary-color-opacity) * 100%), transparent);
 }
 
 .ad-line{
-    background: #2fff00;
+    background: var(--font-color);
     position: fixed;
     top: 0;
     width: 100%;
@@ -45,11 +59,11 @@ body{
 
 .ad-line p{
     font-size: 1.2rem;
-    color: white;
+    color: var(--background-color);
 }
 
 .mega-container {
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-left: 20%;
     width: clamp(800px, 65%, 1800px);
     display: flex;
@@ -66,7 +80,7 @@ body{
 
 .slide-up:nth-child(1){
     /*Рекламная линия*/
-    animation-delay: calc(var(--delay)*7);
+    animation-delay: calc(var(--delay)*3);
 }
     /*Заголовок*/
 .slide-up:nth-child(2){
@@ -89,6 +103,10 @@ body{
     animation-delay: calc(var(--delay)*4);
 }
 
+.slide-up:nth-child(7){
+    animation-delay: calc(var(--delay)*5);
+}
+
 @keyframes sliding-up {
     to {
         opacity: 1;
@@ -99,7 +117,7 @@ body{
     margin-bottom: 0;
     margin-top: 0.4rem;
     /*    background: linear-gradient(to right, rgb(110, 102, 25), #000000, rgb(97, 17, 17));*/
-    background: linear-gradient(to right, #051332, #27064e, rgb(8, 33, 158));
+    background: linear-gradient(30deg, var(--font-color) 0 80%, var(--accent-color));
     background-clip: text;
     color: transparent;
 }
@@ -155,7 +173,7 @@ form{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: linear-gradient(to right, rgba(0, 149, 255, 0.05), rgba(0, 149, 255, 0.01));
+    background: linear-gradient(to right, var(--secondary-color-transparent), var(--background-color));
     border-radius: 14px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 }
@@ -175,26 +193,20 @@ input::placeholder{
     color: rgba(0, 0, 0, 0.84);
 }
 
-input:hover{
-    background: rgba(72, 255, 52, 0.04);
-    transition: 1s;
-}
-
 input:hover::placeholder{
-    color: black;
+    color: var(--font-color-secondary);
     transition: 0.6s;
 }
 
 input:focus::placeholder{
     /*    color: rgba(0, 71, 235, 0.5) ;*/
-    color: #858585;
-    transition: 0.4s;
+    color: var(--background-color);
+    transition: 0.1s;
 }
 
 input:focus{
     color: rgb(0, 21, 69);
     outline: none;
-    background: linear-gradient(to right, rgba(141, 235, 0, 0.27) 1%, white 1%);
     transition: 1s;
 }
 
@@ -209,7 +221,7 @@ input[type="checkbox"]{
     cursor: pointer;
     position: relative;
     /*    color: #de3cfb;*/
-    color: rgb(79, 142, 255);
+    color: var(--accent-color);
 
 }
 
@@ -235,7 +247,7 @@ input[type="checkbox"]:checked::before{
 }
 
 .data-handling a:hover{
-    color: rgb(154, 154, 154);;
+    color: var(--font-color-secondary);
 }
 
 
@@ -245,26 +257,26 @@ input[type="checkbox"]:checked::before{
     height: 2.5rem;
     font-size: 0.9rem;
     border: 1px solid rgba(191, 255, 0, 0.1);
-    color: white;
+    color: var(--font-color);
     transition: 0.6s;
     cursor: pointer;
     transform: translateY(-4px);
-    background: rgba(13, 139, 255, 0.89);
+    background: var(--accent-color);
 }
 
 .submit-button:hover{
-    background: white;
+    background: var(--background-color);
     /*border: 1px solid rgba(162, 255, 0, 0.6);*/
-    color: black;
+    color: var(--font-color);
     transition: 0.9s;
     text-decoration: underline;
 }
 
 .input-item{
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-left: 0.8rem;
     display: flex;
-    margin-right: 30px;
+    margin-right: 0;
 }
 
 /*Styling of details*/
@@ -277,7 +289,7 @@ details{
     padding: 1rem 0.5rem;
     transition: max-height 1s ease-in-out;
     overflow: hidden;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    background: linear-gradient(to right, var(--secondary-color-transparent), var(--background-color));
     border-radius: 14px;
     margin-bottom: 1rem;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05);
@@ -313,7 +325,7 @@ summary::before{
 
 details[open] summary::before{
     clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--font-color);
     transition: 0.3s;
 }
 
@@ -336,9 +348,15 @@ details[open] summary::before{
 }
 
 /*О преподавателе*/
-.about__text{
-    margin-top: 0.5rem;
-    margin-bottom: 0;
+
+.about{
+    padding-left: 1.2rem;
+    width: 90%;
+    margin-top: 1rem;
+
+    background: linear-gradient(to right, var(--secondary-color-transparent), var(--background-color));
+    border-radius: 14px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 }
 
 .about__images{
@@ -353,13 +371,23 @@ details[open] summary::before{
 }
 
 .about__images img:hover {
-    transform: rotate(-0.5deg) scale(1.015) ;
+    transform: rotate(-0.5deg) scale(1.015);
     transition: 0.5s
 }
 
 .about li{
     list-style-type: none;
     position: relative;
+}
+
+.about h3{
+    margin-bottom: 0;
+}
+
+.about p{
+    margin-top: 0.5rem;
+    line-height: 1.6rem;
+    font-size: 1.15rem;
 }
 
 .underline{
@@ -369,7 +397,7 @@ details[open] summary::before{
 nav{
     position: fixed;
     top: 50px;
-    width: 70vw;
+    width: 64.7vw;
     height: 50px;
     background: #ffffff;
     border-radius: 20px;
@@ -379,7 +407,7 @@ nav{
     font-family: 'Roboto Condensed', sans-serif;
     opacity: 0.99;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    color: #1c1c1c;
+    color: var(--font-color);
     z-index: 1;
 }
 
@@ -400,7 +428,7 @@ nav ul{
 }
 
 .nav__item:hover{
-    color: #6c6c6c;
+    color: var(--font-color-secondary);
 }
 
 .nav__item a{
@@ -417,4 +445,19 @@ nav ul{
     backdrop-filter: blur(8px);
     background: rgba(255, 255, 255, 0.15);
     z-index: 1;
+    animation: blur-in 2.4s forwards;
+}
+
+@keyframes blur-in {
+    0%{
+        opacity: 0;
+    }
+
+    99.99%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100;
+    }
 }
