@@ -8,7 +8,7 @@ document.getElementById("tg-form").addEventListener("submit", function(e) {
     const phone = this.phone.value;
     const email = this.email.value;
     const telegram = this.telegram.value;
-
+    const form = document.querySelector('#tg-form');
     const text = `
 Имя: ${name}
 Телефон: ${phone}
@@ -28,8 +28,9 @@ Email: ${email}
         .then(r => r.json())
         .then(result => {
             if (result.ok) {
-                alert("✅ Заявка отправлена!");
-                this.reset();
+                form.textContent = "Ваши данные успешно отправлены";
+                form.style.classList.add('success');
+                this.reset(); /**/
             } else {
                 alert("❌ Ошибка при отправке");
                 console.error(result);
