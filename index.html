@@ -13,7 +13,6 @@
 
 <body>
 <div class="ad-line">
-    <!-- <a href="#tg-form"><p>Бесплатное первое занятие для новых учеников!</p></a> -->
     <p>До конца октября первый урок бесплатно!</p>
 </div>
 
@@ -23,9 +22,9 @@
   <nav class="slide-up">
     <ul>
       <li  class="nav__item"> <a href="#">Обо мне</a> </li>
-      <li  class="nav__item"> <a href="#">FAQ</a> </li>
+      <li  class="nav__item"> <a href="#faq">FAQ</a> </li>
       <li  class="nav__item"> <a href="#">Пройти тест</a> </li>
-      <li  class="nav__item"> <a href="#">Тарифы</a> </li>
+      <li  class="nav__item"> <a href="#lessons">Тарифы</a> </li>
     </ul>
   </nav>
 
@@ -36,13 +35,13 @@
     Помогу вам выйти на новый уровень владения итальянским  языком.
   </h2>
 
-  <div class="about__images slide-up">
+  <div class="about__images slide-up" id="about__images">
     <img src="images/happy_evg2_cut.jpg" alt="Фото Евгения в замке Сан-Марино" height="350px">
     <img src="images/main-picture6.png" alt="Фото Евгения в пуховике" height="350px">
   </div>
 
   <!-- О преподавателе-->
-  <div class="about slide-up">
+  <div class="about slide-up" id="about">
     <h3>Привет, меня зовут <span>Кудяшев Евгений.</span></h3>
     <p>Я репетитор <strong>итальянского </strong>языка. Сейчас живу в Польше, в Кракове, где учусь на 2 курсе <strong>магистратуры </strong> по программе Erasmus. В 2025 году окончил первый курс в Болонском университете. По первому образованию я дипломат. Окончил факультет международных отношений МГИМО.
   </div>
@@ -72,7 +71,7 @@
 
   <!-- Ниже я добавлю Details. Не проходил тестирование.-->
 
-  <div class="faq slide-up">
+  <div class="faq slide-up" id="faq">
     <h2 class="header gradient-text">Часто возникающие вопросы (FAQ)</h2>
     <details>
       <summary>Как будут проходить занятия?</summary>
@@ -100,16 +99,27 @@
     </details>
   </div>
   <h2 class="header">Тарифы</h2>
-  <div class="lessons">
-    <p>
-      Тарифы:
-      Пробный
-      Вводный
-      Стандарт
-      Расширенный
-
-    </p>
+  <div class="lessons" id="lessons">
+    <div class="lessons__item">
+      <h3>Вводный</h3>
+      <p>5 занятий: <strong> 9 000 ₽</strong></p>
+      <p>Скидка <strong> 1000 ₽</strong></p>
+      <a href="#about">Выбрать</a>
+    </div>
+    <div class="lessons__item">
+      <h3>Стандарт</h3>
+      <p>20 занятий: <strong> 38 000 ₽</strong></p>
+      <p>Скидка <strong> 2000 ₽</strong></p>
+      <a href="#about">Выбрать</a>
+    </div>
+    <div class="lessons__item">
+      <h3>Расширенный</h3>
+      <p>30 занятий: <strong> 55 000 ₽</strong></p>
+      <p>Скидка <strong> 5000 ₽</strong></p>
+      <a href="#about">Выбрать</a>
+    </div>
   </div>
+
 </main>
 
 <!-- Ссылка ниже на script.js файл. Не удалять!-->
