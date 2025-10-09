@@ -396,7 +396,7 @@ details[open] summary{
     width: 100%;
 }
 
-.faq__header{
+.header{
     font-size: 2rem;
     margin-left: clamp(10px, 10%, 20%);
     margin-bottom: 1.5rem;
@@ -548,5 +548,32 @@ nav ul{
 
     100%{
         opacity: 100;
+    }
+}
+
+.lessons{
+    background: var(--secondary-color-extra-transparent);
+    border-radius: 14px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    width: 100%;
+}
+
+@media (max-width: 1000px){
+    .main-wrapper{
+        width: calc(100% - 1rem);
+        margin-left: 1rem;
+        transition: 0.3s;
+    }
+
+    nav{
+    visibility: hidden;
+    }
+
+    .about__images{
+        width: 100%;
+        z-index: 3;
     }
 }
