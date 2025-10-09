@@ -12,7 +12,7 @@ body{
 
 
 :root{
-    --delay: 1s;
+    --delay: 0.9s;
 
     --background-color: #FFFFFF;
 
@@ -35,29 +35,17 @@ body{
     background: var(--font-color);
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
+    left: 0;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    animation: fadeIn calc(var(--delay)*5.5) forwards;
     border-radius: 0;
-    z-index: 5;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    90% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    opacity: 1;
+    z-index: 10;
+    overflow: visible;
 }
 
 .ad-line p{
@@ -84,23 +72,23 @@ body{
 
 .slide-up:nth-child(1){
     /*Рекламная линия*/
-    animation-delay: calc(var(--delay)*3.5);
+    animation-delay: calc(var(--delay)*5.5);
 }
     /*Заголовок*/
 .slide-up:nth-child(2){
-    animation-delay: calc(var(--delay)*0.5);
+    animation-delay: calc(var(--delay)*4.5);
 }
     /*Подзаголовок*/
 .slide-up:nth-child(3){
-    animation-delay: calc(var(--delay)*1.5);
+    animation-delay: calc(var(--delay)*2.5);
 }
     /*Подзаголовок*/
 .slide-up:nth-child(4){
-    animation-delay: calc(var(--delay)*2.5);
+    animation-delay: calc(var(--delay)*0.5);
 }
 
 .slide-up:nth-child(5){
-    animation-delay: calc(var(--delay)*3.5);
+    animation-delay: calc(var(--delay)*1.5);
 }
 
 .slide-up:nth-child(6){
@@ -111,7 +99,14 @@ body{
     animation-delay: calc(var(--delay)*4.5);
 }
 
+.slide-up:nth-child(8){
+    animation-delay: calc(var(--delay)*5.5);
+}
+
 @keyframes sliding-up {
+    from{
+        scale: 0.96;
+    }
     to {
         opacity: 1;
     }
@@ -623,9 +618,10 @@ nav ul{
 }
 
 .lessons__item{
+    border: 1px solid var(--font-color-secondary);
     text-align: center;
     margin: 0.5rem;
-    border-radius: 12px;
+    border-radius: 20px;
     width: 300px;
     height: 220px;
     background: linear-gradient(30deg, var(--secondary-color-extra-transparent), var(--secondary-color-transparent));
