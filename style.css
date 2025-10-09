@@ -556,10 +556,15 @@ nav ul{
         width: calc(100% - 2rem);
         margin-left: 1rem;
         transition: 0.3s;
+        margin-top: 3rem;
     }
 
     nav{
-    visibility: hidden;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        position: fixed;
+        visibility: hidden;
     }
 
     .about__images{
@@ -569,8 +574,15 @@ nav ul{
     }
 
     .h1{
-        font-size: 3rem;
+        font-size: 3.3rem;
+        line-height: 4rem;
         text-align: start;
+        margin-left: 5%;
+        margin-top: 0;
+    }
+
+    .h2{
+        margin-left: 5%;
     }
 
     .submit-button{
@@ -620,3 +632,4 @@ nav ul{
     min-width: 200px;
 
 }
+
