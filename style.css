@@ -580,13 +580,18 @@ nav ul{
 
     .h1{
         font-size: 3.8rem;
+        text-align: center;
     }
 
     .submit-button{
-        margin-left: auto;
+        margin-left: 0;
     }
 
     .about__images img{
         width: 900px;
+    }
+
+    .blur-effect{
+        display: none;
     }
 }
