@@ -43,7 +43,7 @@ body{
     cursor: pointer;
     animation: fadeIn calc(var(--delay)*5.5) forwards;
     border-radius: 0;
-    z-index: 1;
+    z-index: 5;
 }
 
 @keyframes fadeIn {
@@ -563,7 +563,7 @@ nav ul{
 
 @media (max-width: 1000px){
     .main-wrapper{
-        width: calc(100% - 1rem);
+        width: calc(100% - 2rem);
         margin-left: 1rem;
         transition: 0.3s;
     }
@@ -575,5 +575,18 @@ nav ul{
     .about__images{
         width: 100%;
         z-index: 3;
+        flex-wrap: wrap;
+    }
+
+    .h1{
+        font-size: 3.8rem;
+    }
+
+    .submit-button{
+        margin-left: auto;
+    }
+
+    .about__images img{
+        width: 900px;
     }
 }
