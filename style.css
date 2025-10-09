@@ -32,7 +32,7 @@ body{
 }
 
 .ad-line{
-    background: var(--font-color);
+    background: black;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -45,13 +45,11 @@ body{
     border-radius: 0;
     opacity: 1;
     z-index: 10;
-    overflow: visible;
 }
 
 .ad-line p{
     font-size: 1.2rem;
-    /*color: var(--background-color);*/
-    color: var(--background-color);
+    color: white;
 }
 
 .main-wrapper {
@@ -70,9 +68,9 @@ body{
     /*Если указать сдвиг, то сдвиг происходит баг со смещением контента*/
 }
 
-.slide-up:nth-child(1){
+.slide-up:first-child{
     /*Рекламная линия*/
-    animation-delay: calc(var(--delay)*5.5);
+    animation-delay: calc(var(--delay)*0);
 }
     /*Заголовок*/
 .slide-up:nth-child(2){
